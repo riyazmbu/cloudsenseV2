@@ -1,0 +1,7 @@
+CloudSense AWS Knowledge Base — Lambda Optimization
+
+AWS Lambda memory is a principal performance control. Increasing memory also increases the CPU available to the function. The correct setting depends on workload behavior, duration, memory usage, CPU/network needs, and cost.
+
+CloudSense should inspect invocation count, duration, memory utilization where available, errors/throttles, concurrency, and workload pattern. A function with long duration is not automatically a cost-saving candidate; increasing memory can sometimes reduce duration enough to change total cost.
+
+Recommendation wording: “Benchmark Lambda memory/runtime configuration” rather than blindly lowering memory. Use load testing or representative invocation testing before production changes.

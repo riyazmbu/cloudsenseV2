@@ -1,0 +1,5 @@
+CloudSense FinOps Policy
+1. Optimization recommendations must be based on measured utilization and billing evidence.
+2. Non-production resources may be scheduled outside business hours when the workload owner confirms that continuous availability is not required.
+3. Production resources require owner review before any sizing, scheduling, or deletion change.
+4. Savings estimates must be traceable to a resource, pricing assumption, and proposed action.

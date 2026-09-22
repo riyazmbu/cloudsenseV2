@@ -1,0 +1,7 @@
+CloudSense AWS Knowledge Base — Cost Data and Evidence
+
+Cost Explorer and resource-level cost data are useful for connecting spend to AWS resources. Cost Explorer supports resource-level data with daily granularity and EC2 resource-level hourly granularity, subject to AWS data limits. AWS notes that Cost and Usage Reports can be used when resource-level data volume exceeds Cost Explorer thresholds and can include resource IDs.
+
+CloudSense must distinguish service-level spend from resource-level spend. If resource-level cost is unavailable, do not invent a per-resource dollar saving. The report should say that the monetary estimate is unavailable or is a scenario estimate based on an explicit rule.
+
+Recommendations should carry evidence quality: measured resource metrics, resource state, cost evidence, or policy-only guidance. Policy knowledge explains what should be checked; live AWS data determines whether a specific resource is actually a candidate.

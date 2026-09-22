@@ -1,0 +1,9 @@
+CloudSense AWS Knowledge Base — NAT Gateway Optimization
+
+NAT Gateway optimization is network-specific. Do NOT use EC2 CPU or memory thresholds for NAT Gateway recommendations.
+
+AWS NAT Gateways have hourly charges and data processing charges. AWS Support provides an inactive NAT Gateway check for gateways that processed zero bytes over the last 30 days and suggests considering deletion when they are not required for external network access.
+
+For active/high-cost NAT Gateways, CloudSense should inspect data processed, traffic paths, cross-AZ routing, subnet architecture, and whether VPC endpoints or alternative egress designs could reduce processing or transfer costs.
+
+CloudSense wording: “Review NAT Gateway traffic/routing optimization.” Never say “Right-size NAT Gateway based on CPU.” NAT Gateways do not use EC2-style CPU/memory rightsizing logic.

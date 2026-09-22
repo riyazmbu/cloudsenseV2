@@ -1,0 +1,9 @@
+CloudSense AWS Knowledge Base — EBS Optimization
+
+Unattached or orphaned EBS volumes continue to incur storage charges. AWS recommends reviewing unattached volumes regularly and validating dependencies before deletion.
+
+An unattached volume should be considered a CLEANUP candidate, not an EC2-style CPU right-sizing candidate.
+
+Before deletion: check volume age, tags, owner, dependencies, backup/retention requirements, compliance requirements, and whether a snapshot is needed. AWS notes that deleting an EBS volume removes its data; a snapshot can be used to preserve recoverability.
+
+CloudSense wording: “Review unattached EBS volume for cleanup” rather than “delete volume”. Human approval is required.

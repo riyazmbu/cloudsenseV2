@@ -1,0 +1,13 @@
+CloudSense AWS Knowledge Base — EC2 Rightsizing
+
+Use this knowledge only as guidance; actual CloudSense resource data is the source of truth for a specific recommendation.
+
+AWS Compute Optimizer analyzes EC2 CPU utilization, network in/out, disk read/write and other utilization signals. AWS classifies EC2 findings as under-provisioned, over-provisioned, or optimized. An over-provisioned instance is one where at least one specification such as CPU, memory, or network can be sized down while still meeting workload requirements and no specification is under-provisioned.
+
+CloudSense EC2 rightsizing evidence should include current instance type, CPU history, memory when available, network, disk activity, workload criticality, environment, and observation window. Low average CPU alone is not sufficient proof that downsizing is safe.
+
+AWS Compute Optimizer supports configurable lookback periods including 14 days, 32 days, and 93 days when enhanced infrastructure metrics are enabled. Its default rightsizing preferences use CPU and memory headroom; recommendations can therefore differ from a simple CPU threshold.
+
+Recommended CloudSense wording: “Review for EC2 rightsizing” when evidence indicates possible over-provisioning. Do not state a specific replacement instance type unless AWS Compute Optimizer or a pricing/configuration analysis provides an evidence-backed candidate.
+
+Validation before production change: inspect peak utilization, memory, network, disk, application latency, error rate, autoscaling behavior, SLA/SLO, and workload seasonality. Test the candidate in a non-production environment when practical and require human approval.

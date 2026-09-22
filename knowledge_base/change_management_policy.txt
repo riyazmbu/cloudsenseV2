@@ -1,0 +1,5 @@
+Cloud Change Management Policy
+1. Optimization changes must have an identified owner.
+2. Production changes require approval and a rollback plan.
+3. Development and test changes can use a lighter approval process where organizational policy permits.
+4. CloudSense should present recommendations for human review and should not claim that changes were executed unless an execution system confirms it.

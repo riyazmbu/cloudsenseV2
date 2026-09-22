@@ -1,0 +1,9 @@
+CloudSense AWS Knowledge Base — RDS Optimization
+
+Amazon RDS publishes metrics to CloudWatch, including CPUUtilization and other database activity metrics. CloudWatch Database Insights can analyze DB Load and filter activity by waits, SQL statements, hosts, and users.
+
+CloudSense should not treat RDS like EC2. A low CPU signal can be useful, but RDS decisions also need database workload, DB Load, connections, storage/IOPS, throughput, memory-related signals where available, replication/HA requirements, and application latency.
+
+For non-production RDS that is used only during defined working periods, scheduling can be more appropriate than rightsizing. For production RDS, a rightsizing recommendation should be phrased as a review unless workload and performance evidence supports a specific change.
+
+Validation: confirm backup/restore requirements, Multi-AZ/replica configuration, maintenance windows, connection limits, IOPS/storage requirements, and application SLAs before changing a DB instance class.

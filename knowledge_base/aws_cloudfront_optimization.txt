@@ -1,0 +1,9 @@
+CloudSense AWS Knowledge Base — CloudFront Optimization
+
+CloudFront cost/performance optimization is primarily related to caching and origin traffic, not CPU or memory rightsizing.
+
+Cache hit ratio is the proportion of cacheable viewer requests served from CloudFront. Improving cache hit ratio can reduce origin load and origin requests. Cache policies control which query strings, headers, and cookies participate in the cache key. Including unnecessary values can reduce cache reuse.
+
+CloudSense should inspect cache hit rate, bytes transferred, origin latency, request patterns, cache policy, TTLs, query strings, headers/cookies, and Origin Shield configuration where applicable.
+
+Recommendation wording: “Review CloudFront cache/origin-transfer optimization.” Do not recommend generic instance rightsizing for CloudFront.

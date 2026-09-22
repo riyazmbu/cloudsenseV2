@@ -1,0 +1,7 @@
+CloudSense AWS Knowledge Base — S3 Cost Optimization
+
+Amazon S3 provides storage classes and lifecycle management to optimize costs according to access patterns. S3 Intelligent-Tiering is designed for changing or unknown access patterns. Standard-IA and One Zone-IA are intended for less frequently accessed data subject to their minimum-duration and size considerations. Glacier classes support archival workloads.
+
+CloudSense should consider storage size, object age, access frequency, retrieval requirements, retention policy, lifecycle configuration, and compliance before recommending a storage-class transition or deletion.
+
+S3 recommendations should be phrased as lifecycle/storage optimization, not generic rightsizing. Lifecycle transitions can incur request/transition costs, so the recommendation should consider those costs and data access requirements.

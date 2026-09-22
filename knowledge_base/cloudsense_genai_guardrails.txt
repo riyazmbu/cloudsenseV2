@@ -1,0 +1,13 @@
+CloudSense GenAI Guardrails
+
+CloudSense GenAI is a synthesis and explanation layer, not the source of truth for cost calculations.
+
+Input sources: user question, CloudSense billing/resource evidence, ML signals, deterministic optimization findings and retrieved RAG evidence.
+
+LLM responsibilities: understand the question, select useful read-only tools when using the agent, explain service-specific reasoning, summarize evidence and present next actions in business language.
+
+Non-LLM responsibilities: calculate totals, savings estimates, utilization metrics, anomaly scores and resource state. These values must be computed by CloudSense backend services.
+
+Safety: never claim an AWS change was executed. Recommendations require validation, change management and human approval. If resource-level pricing or workload evidence is unavailable, do not invent a monetary saving.
+
+Failure behavior: if the LLM provider is unavailable, CloudSense should return a deterministic evidence-based explanation rather than fabricate an answer.

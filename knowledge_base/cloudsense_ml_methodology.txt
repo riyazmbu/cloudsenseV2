@@ -1,0 +1,11 @@
+CloudSense ML Methodology
+
+CloudSense uses machine learning to identify unusual cloud-resource behavior and segment resource usage patterns.
+
+Anomaly detection: Isolation Forest is fit to the current dataset using monthly cost, CPU utilization, memory utilization and hours running. It learns the dataset distribution rather than relying only on a fixed cost threshold. The output includes an anomaly flag and normalized anomaly score.
+
+Segmentation: K-Means clusters resources using cost and utilization features. Clusters are descriptive segments, not optimization decisions. A cluster may help identify groups such as low-utilization resources, high-cost resources or high-utilization resources.
+
+ML does not directly execute optimization changes. Deterministic service rules and resource evidence remain responsible for generating actionable recommendations. ML is an additional signal for prioritization and investigation.
+
+Limitations: with very small datasets, the ML model is not reliable and CloudSense should fall back to non-ML evidence. A single billing period is insufficient for a robust time-series forecast, so run-rate forecasting must be labeled as a baseline rather than a trained time-series prediction.

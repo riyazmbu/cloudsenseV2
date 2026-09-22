@@ -1,0 +1,13 @@
+CloudSense RAG Methodology
+
+Purpose: retrieve authoritative cloud-cost and service guidance that explains a recommendation without replacing observed CloudSense evidence.
+
+Pipeline: question -> Hugging Face sentence-transformer embedding -> ChromaDB vector similarity search -> top evidence chunks -> grounded GenAI answer.
+
+Grounding rules: resource metrics, billing amounts, utilization and savings come from CloudSense data. AWS knowledge comes from the indexed knowledge base. The LLM must not invent a metric or savings value. If evidence is missing, the answer must say that validation is required.
+
+Evidence format: [filename#chunk]. The chatbot should cite retrieved knowledge sources when they materially support the explanation.
+
+Retrieval quality: use service-specific documents and similarity ranking. EC2 questions should retrieve EC2/right-sizing guidance; RDS questions should retrieve RDS metrics; NAT questions should retrieve NAT traffic and data-processing guidance; S3 questions should retrieve storage-class and lifecycle guidance.
+
+Vector database: ChromaDB persists embeddings locally under vector_store. The collection is cloudsense_aws_knowledge. The embedding model is sentence-transformers/all-MiniLM-L6-v2 from Hugging Face.

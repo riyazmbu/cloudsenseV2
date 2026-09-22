@@ -1,0 +1,5 @@
+Cloud Resource Rightsizing Guide
+1. Resources with consistently low CPU and memory utilization can be reviewed for smaller instance sizes.
+2. A rightsizing recommendation should consider both CPU and memory rather than CPU alone.
+3. Production changes should be tested before implementation.
+4. A recommendation is not an execution command; an authorized operator must approve and implement the change.

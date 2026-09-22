@@ -1,0 +1,9 @@
+AWS Cost Evidence and Pricing Boundaries
+
+CloudSense separates observed spend from estimated optimization savings.
+
+Observed spend should come from uploaded billing data or AWS Cost Explorer/resource-level billing where available. Cost Explorer and billing data may have different granularity and availability limits; resource-level savings should not be inferred when the resource ID is absent.
+
+Optimization percentages in CloudSense are estimates used for prioritization. They are not AWS price quotes. A final savings figure should be validated against the actual AWS pricing for the target region, purchase option, architecture and workload.
+
+For production recommendations, validate peak workload, dependencies, availability requirements, backup and retention requirements, monitoring/security agents, and rollback procedures before implementation.

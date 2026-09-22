@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+aws_connection.json
+__pycache__/
+.pytest_cache/
